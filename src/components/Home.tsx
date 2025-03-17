@@ -14,7 +14,7 @@ const Home = () => {
                 Ammottaako halkoliiteri tyhjyyttä?
             </Typography>
             <br />
-            <Button variant="outlined" color="primary" component={Link} to="/">Ota yhteyttä!</Button>
+            <Button variant="outlined" color="primary" component={Link} to="/">Ota yhteyttä!</Button>            
         </Box>
     )
 }
