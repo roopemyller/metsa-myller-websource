@@ -1,14 +1,11 @@
-import { Box, AppBar, Toolbar, Typography,  } from "@mui/material"
+import { Box, Typography } from "@mui/material"
 
 const Footer = () => {
     return (
-        <Box sx={{ flexGrow: 1}}>
-            <AppBar position="fixed" color="primary" sx={{top: 'auto', bottom: 0}}>
-                <Toolbar sx={{justifyContent: 'center'}}>
-                    <Typography variant="body1" color="secondary.main" sx={{textAlign: "center"}}>
-                        Copyright (c) METSÄ-MYLLER<br/>Kaikki oikeudet pidätetään</Typography>                
-                   </Toolbar>
-            </AppBar>
+        <Box position="fixed" sx={{ textAlign: "center", py: 1.5, bgcolor: "primary.main", mt: 3 , bottom: 0, left: 0, right: 0}}>
+            <Typography variant="body2" color="secondary.main" sx={{textAlign: "center"}}>
+                Copyright (c) METSÄ-MYLLER<br/>Kaikki oikeudet pidätetään
+            </Typography>                
         </Box>
     )
 }

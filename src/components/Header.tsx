@@ -1,28 +1,32 @@
 import { Box, AppBar, Toolbar, Typography, Button, Container,  } from "@mui/material"
+import React from "react"
 import { Link } from "react-router-dom"
 
 
-const Header = () => {
+const Header : React.FC = () => {
     return (
-        <Box>
-            <AppBar position="fixed" color="primary">
-                <Container maxWidth="lg">
-                    <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
-                        <Box sx = {{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 1 }}>
-                            <img src="logo.png" alt="logo" style={{width: 75, height: 75, padding: 2}}/>
-                        </Box>
-                        <Typography variant="h4" component="div" sx={{ color: 'secondary.main' }}>Metsä - Myller</Typography>
-                        
-                        <Box sx = {{ justifyContent: "left",display: 'flex', gap: 1 }}>
-                            <Button variant="outlined" color="inherit" component={Link} to="/">Etusivu</Button>
-                            <Button variant="outlined" color="inherit" component={Link} to="/">Meistä</Button>
-                            <Button variant="outlined" color="inherit" component={Link} to="/">Palvelut</Button>
-                            <Button variant="outlined" color="inherit" component={Link} to="/">Yhteystiedot</Button>
-                        </Box>
-                    </Toolbar>
-                </Container>
-            </AppBar>
-        </Box>
+        <AppBar position="fixed" color="primary">
+            <Container maxWidth="lg">
+                <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
+                    
+                    <img src="logo.png" alt="logo" style={{width: 75, height: 75, padding: 2}}/>
+                    <Typography variant="h4" sx={{ color: 'secondary.main' }}>
+                        Metsä - Myller
+                    </Typography>
+                    <Box sx = {{ justifyContent: "left",display: 'flex', gap: 1 }}>
+                        <Button variant="outlined" color="inherit" component={Link} to="/">
+                            Etusivu
+                        </Button>
+                        <Button variant="outlined" color="inherit" component={Link} to="/palvelut">
+                            Palvelut
+                        </Button>
+                        <Button variant="outlined" color="inherit" component={Link} to="/yhteystiedot">
+                            Yhteystiedot
+                        </Button>
+                    </Box>
+                </Toolbar>
+            </Container>
+        </AppBar>
     )
 }
 

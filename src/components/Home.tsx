@@ -1,8 +1,9 @@
 import { Box, Typography, Button,  } from "@mui/material"
+import React from "react"
 import { Link } from "react-router-dom"
 
 
-const Home = () => {
+const Home : React.FC = () => {
     return (
         <Box sx={{ flexGrow: 1, justifyContent: 'left'}}>
             <Typography variant="h2">METSÄ-MYLLER palveluksessasi!</Typography>
