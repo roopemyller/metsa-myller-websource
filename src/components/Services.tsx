@@ -7,7 +7,7 @@ import { useState } from 'react'
 import Firewood from "./Firewood"
 import ForestryServices from "./ForestryServices"
 
-const Services: React.FC = () => {
+const Services : React.FC = () => {
     const [value, setValue] = useState('1');
 
     const handleChange = (_event: React.SyntheticEvent, newValue: string) => {
