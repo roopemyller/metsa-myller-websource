@@ -22,7 +22,7 @@ const Contact : React.FC = () => {
                 justifyContent="space-between"
             >
         {/* Left Side: Contact Form */}
-        <Box sx={{ flex: 1 }}>
+        <Box sx={{ flex: 1, mb: 4 }}>
             <Stack spacing={2}>
                 <TextField label="Koko nimi" variant="outlined" fullWidth required />
                 <TextField label="Sähköposti" type="email" variant="outlined" fullWidth required />
