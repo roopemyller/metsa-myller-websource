@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { HashRouter, Route, Routes } from 'react-router-dom'
 import Home from './components/Home'
 import Header from './components/Header'
 import Footer from './components/Footer'
@@ -12,21 +12,32 @@ import { Box, Container } from '@mui/material'
 const App : React.FC = () => {
 
   return (
-    <>
-      <BrowserRouter basename='metsa-myller-websource'>
+    <HashRouter>
       <Header />
-        <Box sx={{ display: 'flex', flexDirection: 'column'}}>
-            <Container sx={{paddingTop: '74px' , paddingBottom: '74px'}}>
-              <Routes>
-                <Route path="/" element={<Home/>}/>
-                <Route path="/palvelut" element={<Services/>}/>
-                <Route path="/yhteystiedot" element={<Contact/>}/>
-              </Routes>
-            </Container>
-        </Box>
-        <Footer />
-      </BrowserRouter>
-    </>
+      <Box
+        component="main"
+        sx={{
+          pt: { xs: '56px', md: '74px' },
+          pb: { xs: '56px', md: '74px' },
+          width: '100%',
+          minHeight: 'calc(100vh - 120px)',
+        }}
+      >
+        <Container
+          maxWidth="lg"
+          sx={{
+            px: { xs: 2, md: 0 },
+          }}
+        >
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/palvelut" element={<Services />} />
+            <Route path="/yhteystiedot" element={<Contact />} />
+          </Routes>
+        </Container>
+      </Box>
+      <Footer />
+    </HashRouter>
   )
 }
 
