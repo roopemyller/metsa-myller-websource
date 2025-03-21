@@ -1,3 +1,14 @@
 # metsa-myller-websource repository
 
-testi
+Metsä-Myller websource
+
+## gh-pages deployment
+
+After changes do the following
+
+```
+git add .
+git commit -m "message"
+git push
+pnpm run deploy
+```
