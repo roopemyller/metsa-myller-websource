@@ -13,7 +13,7 @@ const App : React.FC = () => {
 
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename='metsa-myller-websource'>
       <Header />
         <Box sx={{ display: 'flex', flexDirection: 'column'}}>
             <Container sx={{paddingTop: '74px' , paddingBottom: '74px'}}>
