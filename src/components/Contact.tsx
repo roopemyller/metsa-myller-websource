@@ -1,7 +1,73 @@
 import { Box, Typography, Button, Stack, TextField, Divider  } from "@mui/material"
-import React from "react"
+import React, { useEffect, useRef, useState } from "react"
+import HCaptcha from '@hcaptcha/react-hcaptcha'
 
 const Contact : React.FC = () => {
+
+    const [formData, setFormData] = useState({ name: "", email: "", number: "", message: "" })
+    const [status, setStatus] = useState<string | null>(null)
+    const [token, setToken] = useState<string | null>(null)
+    const captchaRef = useRef<HCaptcha>(null)
+
+    useEffect(() => {
+        let timeoutId: NodeJS.Timeout
+        
+        if (status) {
+            timeoutId = setTimeout(() => {
+                setStatus(null);
+            }, 5000)
+        }
+
+        // Cleanup function to clear timeout if component unmounts or status changes
+        return () => {
+            if (timeoutId) {
+                clearTimeout(timeoutId);
+            }
+        }
+    }, [status])
+
+    const onHCaptchaChange = (token : string) => {
+        setToken(token)
+    }
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value })
+    }
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault()
+
+        if (!token) {
+            setStatus("Ole hyvä ja suorita captcha-vahvistus.")
+            return
+        }
+        const data = new FormData()
+        data.append("access_key", "c5a1bb6b-bbf7-4786-b33c-5a9c0ddd553a")
+        data.append("name", formData.name)
+        data.append("email", formData.email)
+        data.append("number", formData.number)
+        data.append("message", formData.message)
+        data.append("h-captcha-response", token)
+
+        try {
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: data,
+            })
+        
+            if (response.ok) {
+                setStatus("Viesti lähetetty! Vastaan mahdollisimman pian.")
+                setFormData({ name: "", email: "", number:"", message: "" })
+                setToken(null)
+                captchaRef.current?.resetCaptcha()
+            } else {
+                setStatus("Viestin lähettäminen epäonnistui. Yritä uudelleen.")
+            }
+        } catch (error) {
+            setStatus("Viestin lähettäminen epäonnistui. Yritä uudelleen.")
+        }
+      }
+
     return (
         <Box>
             <Typography variant="h2">
@@ -23,17 +89,23 @@ const Contact : React.FC = () => {
             >
         {/* Left Side: Contact Form */}
         <Box sx={{ flex: 1, mb: 4 }}>
-            <Stack spacing={2}>
-                <TextField label="Koko nimi" variant="outlined" fullWidth required />
-                <TextField label="Sähköposti" type="email" variant="outlined" fullWidth required />
-                <TextField label="Puhelinnumero" type="tel" variant="outlined" fullWidth required />
-                <TextField label="Otsikko" variant="outlined" fullWidth required />
-                <TextField label="Viesti" multiline rows={4} variant="outlined" fullWidth required />
-                <TextField label="Vahvistuskoodi" variant="outlined" fullWidth required />
-                <Button variant="contained" color="primary" size="large">
+            <Box component="form" onSubmit={handleSubmit} sx={{ display: "flex", flexDirection: "column", gap: 1.5}}>
+                <TextField name="name" value={formData.name} label="Koko nimi" variant="outlined" fullWidth required onChange={handleChange} />
+                <TextField name="email" value={formData.email} label="Sähköposti" type="email" variant="outlined" fullWidth required onChange={handleChange} />
+                <TextField name="number" value={formData.number} label="Puhelinnumero" type="tel" variant="outlined" fullWidth required onChange={handleChange}/>
+                <TextField name="message" value={formData.message} label="Viesti" multiline rows={4} variant="outlined" fullWidth required onChange={handleChange}/>
+                <HCaptcha
+                    sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
+                    ref={captchaRef}
+                    reCaptchaCompat={false}
+                    onVerify={onHCaptchaChange}
+                    languageOverride="fi"
+                />
+                <Button variant="contained" color="primary" size="large" type="submit">
                 Lähetä viesti
                 </Button>
-            </Stack>
+                {status && <Typography color="primary">{status}</Typography>}
+            </Box>
             </Box>
                 {/* Divider */}
                 <Divider
