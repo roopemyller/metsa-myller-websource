@@ -7,12 +7,12 @@ const Home : React.FC = () => {
     return (
         <Stack 
             direction={{ xs: "column", md: "row" }} 
-            spacing={4} 
+            spacing={3} 
             alignItems="center"
-            padding={5}
+            padding={3}
         >
             <Box sx={{ flexGrow: 1, justifyContent: 'left'}}>
-                <Typography variant="h2">METSÄ-MYLLER palveluksessasi!</Typography>
+                <Typography variant="h2" sx={{wordBreak: "break-word", fontSize: { xs: '3rem', md: '3.5rem' }}}>METSÄ-MYLLER palveluksessasi!</Typography>
                 <Typography variant="body1">
                     Tarvitsetko apua metsätilasi hoidossa? <br/>
                     Eikö terassilta näe järvelle? <br/>

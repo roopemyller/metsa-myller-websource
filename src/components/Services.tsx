@@ -16,7 +16,7 @@ const Services : React.FC = () => {
 
     return (
         <Box sx={{maxWidth: "850px", width: "100%"}}>
-            <Typography variant="h2">PALVELUT</Typography>
+            <Typography variant="h2" sx={{wordBreak: "break-word", fontSize: { xs: '3rem', md: '3.5rem' }}}>PALVELUT</Typography>
             <Box sx={{ display: 'flex', justifyContent: 'space-between', gap: 2, alignItems: 'center', mt: 5, pb: 2 }}>
                 <Typography variant="body1">
                     Lue lisää alta tarjoamistamme palveluista ja hinnoistamme!
