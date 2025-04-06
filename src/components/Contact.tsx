@@ -72,7 +72,7 @@ const Contact : React.FC = () => {
 
     return (
         <Box sx={{maxWidth: "850px", width: "100%"}}>
-            <Typography variant="h2" sx={{wordBreak: "break-word", fontSize: { xs: '3rem', md: '3.5rem' }}}>
+            <Typography variant="h2" sx={{wordBreak: "break-word", fontSize: { xs: '2.5rem', md: '3.5rem' }}}>
                 YHTEYDENOTTO
             </Typography>
 

@@ -9,10 +9,10 @@ const Home : React.FC = () => {
             direction={{ xs: "column", md: "row" }} 
             spacing={3} 
             alignItems="center"
-            padding={3}
+            padding={ { xs: 1, md: 4 }}
         >
-            <Box sx={{ flexGrow: 1, justifyContent: 'left'}}>
-                <Typography variant="h2" sx={{wordBreak: "break-word", fontSize: { xs: '3rem', md: '3.5rem' }}}>METSÄ-MYLLER palveluksessasi!</Typography>
+            <Box sx={{ flexGrow: 1, justifyContent: { xs: "center", md: "left" } }}>
+                <Typography variant="h2" sx={{wordBreak: "break-word", fontSize: { xs: '2.5rem', md: '3.5rem' }}}>METSÄ-MYLLER palveluksessasi!</Typography>
                 <Typography variant="body1">
                     Tarvitsetko apua metsätilasi hoidossa? <br/>
                     Eikö terassilta näe järvelle? <br/>
@@ -24,14 +24,28 @@ const Home : React.FC = () => {
                 <Button variant="outlined" color="primary" component={Link} to="/yhteystiedot">Ota yhteyttä!</Button>            
             </Box>
             <Box
+                display={{ xs: "none", md: "block" }}
                 component="img"
-                src="./henkilo-koko.png"
+                src={"./henkilo-koko.png"}
                 alt="Metsä-Myller henkilökuva"
                 sx={{
                     paddingRight: 15,
                     maxHeight: 800,
                     width: 'auto',
                     objectFit: 'contain',
+                }}
+            />
+            <Box
+                display={{ xs: "block", md: "none" }}
+                component="img"
+                src={"./henkilo-1.jpg"}
+                alt="Metsä-Myller henkilökuva"
+                sx={{
+                    maxHeight: 400,
+                    width: 'auto',
+                    objectFit: 'contain',
+                    borderRadius: '8px',
+                    boxShadow: '0 3px 6px rgba(0, 0, 0, 0.5)',
                 }}
             />
         </Stack>
