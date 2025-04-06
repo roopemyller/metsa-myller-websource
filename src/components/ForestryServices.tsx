@@ -2,7 +2,7 @@ import { Box, Typography, List, ListItem, ListItemText, Paper } from "@mui/mater
 
 const ForestryServices = () => {
   return (
-    <Box sx={{ maxWidth: 800, mx: "auto", p: 3 }}>
+    <Box>
       <Typography variant="h4" gutterBottom>
         Metsätyö Petri Myller tarjoaa seuraavia palveluita
       </Typography>

@@ -71,7 +71,7 @@ const Contact : React.FC = () => {
       }
 
     return (
-        <Box>
+        <Box maxWidth={"850px"}>
             <Typography variant="h2">
                 YHTEYDENOTTO
             </Typography>
@@ -84,31 +84,46 @@ const Contact : React.FC = () => {
                 Päiväsaikaan tavoittaa parhaiten tekstiviestillä tai sähköpostilla, koska sahan pärinän yli ei puhelimen sointia tahdo kuulla.
             </Typography>
 
+            <Box
+                component="img"
+                src="./yleis-1.jpg"
+                alt="Metsä-Myller Yleiskuva"
+                sx={{
+                    width: '100%',
+                    maxWidth: '850px',
+                    height: 'auto',
+                    objectFit: 'contain',
+                    borderRadius: '8px',
+                    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.5)',
+                }}
+            />
+
             <Stack
                 direction={{ xs: "column", md: "row" }}
                 spacing={4}
                 justifyContent="space-between"
+                paddingTop={3}
             >
-        {/* Left Side: Contact Form */}
-        <Box sx={{ flex: 1, mb: 4 }}>
-            <Box component="form" onSubmit={handleSubmit} sx={{ display: "flex", flexDirection: "column", gap: 1.5}}>
-                <TextField name="name" value={formData.name} label="Koko nimi" variant="outlined" fullWidth required onChange={handleChange} />
-                <TextField name="email" value={formData.email} label="Sähköposti" type="email" variant="outlined" fullWidth required onChange={handleChange} />
-                <TextField name="number" value={formData.number} label="Puhelinnumero" type="tel" variant="outlined" fullWidth required onChange={handleChange}/>
-                <TextField name="message" value={formData.message} label="Viesti" multiline rows={4} variant="outlined" fullWidth required onChange={handleChange}/>
-                <HCaptcha
-                    sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
-                    ref={captchaRef}
-                    reCaptchaCompat={false}
-                    onVerify={onHCaptchaChange}
-                    languageOverride="fi"
-                />
-                <Button variant="contained" color="primary" size="large" type="submit">
-                Lähetä viesti
-                </Button>
-                {status && <Typography color="primary">{status}</Typography>}
-            </Box>
-            </Box>
+                {/* Left Side: Contact Form */}
+                <Box sx={{ flex: 1, mb: 4 }}>
+                    <Box component="form" onSubmit={handleSubmit} sx={{ display: "flex", flexDirection: "column", gap: 1.5}}>
+                        <TextField name="name" value={formData.name} label="Koko nimi" variant="outlined" fullWidth required onChange={handleChange} />
+                        <TextField name="email" value={formData.email} label="Sähköposti" type="email" variant="outlined" fullWidth required onChange={handleChange} />
+                        <TextField name="number" value={formData.number} label="Puhelinnumero" type="tel" variant="outlined" fullWidth required onChange={handleChange}/>
+                        <TextField name="message" value={formData.message} label="Viesti" multiline rows={4} variant="outlined" fullWidth required onChange={handleChange}/>
+                        <HCaptcha
+                            sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
+                            ref={captchaRef}
+                            reCaptchaCompat={false}
+                            onVerify={onHCaptchaChange}
+                            languageOverride="fi"
+                        />
+                        <Button variant="contained" color="primary" size="large" type="submit">
+                        Lähetä viesti
+                        </Button>
+                        {status && <Typography color="primary">{status}</Typography>}
+                    </Box>
+                </Box>
                 {/* Divider */}
                 <Divider
                     orientation="vertical"
@@ -131,7 +146,7 @@ const Contact : React.FC = () => {
                     <Typography variant="body1">Metsätyö Petri Myller</Typography>
                     <Typography variant="body2">Y-tunnus: 2617685-6</Typography>
                     <Typography variant="body2">0400 858 720</Typography>
-                    <Typography variant="body2">petri@metsa-myller.fi</Typography>
+                    <Typography variant="body2"><a href="mailto:petri@metsa-myller.fi">petri@metsa-myller.fi</a></Typography>
                     <Typography variant="body2">Särkäntie 14, 80100 Joensuu</Typography>
 
                     <Box mt={2}>
@@ -141,7 +156,7 @@ const Contact : React.FC = () => {
 
                         <Typography variant="body1" mt={1}>Petri Myller</Typography>
                         <Typography variant="body2">0400 858 720</Typography>
-                        <Typography variant="body2">petri@metsa-myller.fi</Typography>
+                        <Typography variant="body2"><a href="mailto:petri@metsa-myller.fi">petri@metsa-myller.fi</a></Typography>
                         <Typography variant="body2">Särkäntie 14, 80100 Joensuu</Typography>
 
                         <Typography variant="body1" mt={1}>Janne Myller</Typography>

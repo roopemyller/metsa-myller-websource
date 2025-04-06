@@ -15,7 +15,7 @@ const Services : React.FC = () => {
     }
 
     return (
-        <Box>
+        <Box maxWidth={"850px"}>
             <Typography variant="h2">PALVELUT</Typography>
             <Box sx={{ display: 'flex', justifyContent: 'space-between', gap: 2, alignItems: 'center', mt: 5}}>
                 <Typography variant="body1">
@@ -25,9 +25,21 @@ const Services : React.FC = () => {
                 <Button variant="outlined" color="primary" component={Link} to="/yhteystiedot">Pyydä tarjous!</Button>            
             </Box>
             <br/><br/>
-
+            <Box
+                component="img"
+                src="./yleis-3.jpg"
+                alt="Metsä-Myller Yleiskuva"
+                sx={{
+                    width: '100%',
+                    maxWidth: '850px',
+                    height: 'auto',
+                    objectFit: 'contain',
+                    borderRadius: '8px',
+                    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.5)',
+                }}
+            />
             <TabContext value={value}>
-                <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+                <Box sx={{ borderBottom: 1, borderColor: 'divider', mt: 2 }}>
                     <TabList onChange={handleChange} aria-label="services tabs" variant="fullWidth">
                     <Tab label="Metsätyöpalvelut" value="1" />
                     <Tab label="Polttopuut" value="2" />
