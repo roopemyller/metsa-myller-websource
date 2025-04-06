@@ -10,7 +10,7 @@ const Home : React.FC = () => {
                 direction={{ xs: "column", md: "row" }} 
                 spacing={3} 
                 alignItems="center"
-                padding={ { xs: 1, md: 4 }}
+                paddingLeft={ { xs: 0, md: 2}}
             >
                 <Box sx={{ flexGrow: 1, justifyContent: { xs: "center", md: "left" } }}>
                     <Typography variant="h2" sx={{wordBreak: "break-word", fontSize: { xs: '2.5rem', md: '3.5rem' }}}>METSÄ-MYLLER palveluksessasi!</Typography>
@@ -49,7 +49,7 @@ const Home : React.FC = () => {
                     src={"./henkilo-koko.png"}
                     alt="Metsä-Myller henkilökuva"
                     sx={{
-                        paddingRight: 15,
+                        paddingRight: 2,
                         maxHeight: 850,
                         width: 'auto',
                         objectFit: 'contain',

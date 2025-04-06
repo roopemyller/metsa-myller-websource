@@ -26,7 +26,7 @@ const App : React.FC = () => {
         <Container
           maxWidth="lg"
           sx={{
-            px: { xs: 2, md: 0 },
+            px: { xs: 1, md: 0 },
           }}
         >
           <Routes>
