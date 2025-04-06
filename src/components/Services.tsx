@@ -15,16 +15,15 @@ const Services : React.FC = () => {
     }
 
     return (
-        <Box maxWidth={"850px"}>
+        <Box sx={{maxWidth: "850px", width: "100%"}}>
             <Typography variant="h2">PALVELUT</Typography>
-            <Box sx={{ display: 'flex', justifyContent: 'space-between', gap: 2, alignItems: 'center', mt: 5}}>
+            <Box sx={{ display: 'flex', justifyContent: 'space-between', gap: 2, alignItems: 'center', mt: 5, pb: 2 }}>
                 <Typography variant="body1">
                     Lue lisää alta tarjoamistamme palveluista ja hinnoistamme!
                 </Typography>
 
                 <Button variant="outlined" color="primary" component={Link} to="/yhteystiedot">Pyydä tarjous!</Button>            
             </Box>
-            <br/><br/>
             <Box
                 component="img"
                 src="./yleis-3.jpg"
@@ -45,7 +44,7 @@ const Services : React.FC = () => {
                     <Tab label="Polttopuut" value="2" />
                     </TabList>
                 </Box>
-                <Box sx={{ width: '100%', maxWidth: '850px', margin: '0 auto' }}>
+                <Box sx={{ width: '100%', maxWidth: '850px' }}>
                     <TabPanel value="1">
                         <ForestryServices/>
                     </TabPanel>
