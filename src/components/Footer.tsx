@@ -1,4 +1,5 @@
-import { Box, Typography } from "@mui/material"
+import { Button, Box, Typography } from "@mui/material"
+import { Link } from "react-router-dom"
 
 const Footer = () => {
     return (
@@ -6,6 +7,7 @@ const Footer = () => {
             <Typography variant="body2" color="secondary.main" sx={{textAlign: "center"}}>
                 Copyright (c) METSÄ-MYLLER<br/>Kaikki oikeudet pidätetään
             </Typography>                
+            <Button variant="outlined" color="secondary" component={Link} to="/yhteystiedot">Ota yhteyttä!</Button>            
         </Box>
     )
 }
