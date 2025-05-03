@@ -1,6 +1,6 @@
 # metsa-myller-websource repository
 
-Metsä-Myller websource
+Metsä-Myller website source code
 
 ## gh-pages deployment
 
