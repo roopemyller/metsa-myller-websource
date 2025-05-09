@@ -15,7 +15,7 @@ const Services : React.FC = () => {
     }
 
     return (
-        <Box sx={{maxWidth: "850px", width: "100%"}}>
+        <Box sx={{maxWidth: "850px", width: "100%", margin: "0 auto"}}>
             <Typography variant="h2" sx={{wordBreak: "break-word", fontSize: { xs: '2.5rem', md: '3.5rem' }}}>PALVELUT</Typography>
             <Box sx={{ display: 'flex', justifyContent: 'space-between', gap: 2, alignItems: 'center', pb: 2 }}>
                 <Typography variant="body1">

@@ -67,11 +67,12 @@ const Contact : React.FC = () => {
             }
         } catch (error) {
             setStatus("Viestin lähettäminen epäonnistui. Yritä uudelleen.")
+            console.error("Error sending message:", error)
         }
       }
 
     return (
-        <Box sx={{maxWidth: "850px", width: "100%"}}>
+        <Box sx={{maxWidth: "850px", width: "100%", margin: "0 auto"}}>
             <Typography variant="h2" sx={{wordBreak: "break-word", fontSize: { xs: '2.5rem', md: '3.5rem' }}}>
                 YHTEYSTIEDOT
             </Typography>

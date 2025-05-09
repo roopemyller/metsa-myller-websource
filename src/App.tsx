@@ -10,33 +10,40 @@ import React from 'react'
 import { Box, Container } from '@mui/material'
 
 const App : React.FC = () => {
-
   return (
     <HashRouter>
-      <Header />
       <Box
-        component="main"
         sx={{
-          pt: { xs: '56px', md: '74px' },
-          pb: { xs: '56px', md: '74px' },
+          display: 'flex',
+          flexDirection: 'column',
+          minHeight: '100vh',
           width: '100%',
-          minHeight: 'calc(100vh - 120px)',
-        }}
-      >
-        <Container
-          maxWidth="lg"
+        }}>
+        <Header />
+        <Box
+          component="main"
           sx={{
-            px: { xs: 1, md: 0 },
+            pt: { xs: '56px', md: '74px' },
+            pb: { xs: '20px', md: '30px' },
+            flex: 1,
           }}
         >
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/palvelut" element={<Services />} />
-            <Route path="/yhteystiedot" element={<Contact />} />
-          </Routes>
-        </Container>
+          <Container
+            className="content-container"
+            maxWidth="lg"
+            sx={{
+              px: { xs: 1, md: 0 },
+            }}
+          >
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/palvelut" element={<Services />} />
+              <Route path="/yhteystiedot" element={<Contact />} />
+            </Routes>
+          </Container>
+        </Box>
+        <Footer />
       </Box>
-      <Footer />
     </HashRouter>
   )
 }
