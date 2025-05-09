@@ -12,10 +12,10 @@ const ForestryServices = () => {
           Pihapuiden kaadot
         </Typography>
         <List>
-          <ListItem><ListItemText primary="Maastakaadot tarkasti ja ammattitaidolla" /></ListItem>
-          <ListItem><ListItemText primary="Tarvittaessa puut karsitaan ja katkotaan asiakkaan tarpeiden mukaisesti" /></ListItem>
-          <ListItem><ListItemText primary="Tarvittaessa kaadetut puut tehdään polttopuiksi" /></ListItem>
-          <ListItem><ListItemText primary="Puujätteen poiskuljetus järjestetään" /></ListItem>
+          <ListItem><ListItemText primary="Maastakaadot tarkasti ja ammattitaidolla." /></ListItem>
+          <ListItem><ListItemText primary="Tarvittaessa puut karsitaan ja katkotaan asiakkaan tarpeiden mukaisesti." /></ListItem>
+          <ListItem><ListItemText primary="Tarvittaessa kaadetut puut tehdään polttopuiksi." /></ListItem>
+          <ListItem><ListItemText primary="Puujätteen poiskuljetus järjestetään." /></ListItem>
         </List>
       </Paper>
       
@@ -24,8 +24,8 @@ const ForestryServices = () => {
           Kaatokiipeily
         </Typography>
         <List>
-          <ListItem><ListItemText primary="Jos puu ei mahdu kaatumaan kokonaisena, karsitaan se pystyyn ja katkotaan kiipeilytekniikalla latvasta alkaen" /></ListItem>
-          <ListItem><ListItemText primary="Oksat, latvus ja runko otetaan alas tarvittaessa köysien avulla turvallisesti" /></ListItem>
+          <ListItem><ListItemText primary="Jos puu ei mahdu kaatumaan kokonaisena, karsitaan se pystyyn ja katkotaan kiipeilytekniikalla latvasta alkaen." /></ListItem>
+          <ListItem><ListItemText primary="Oksat, latvus ja runko otetaan alas tarvittaessa köysien avulla turvallisesti." /></ListItem>
         </List>
       </Paper>
       
@@ -41,9 +41,9 @@ const ForestryServices = () => {
           Muut metsätyöt
         </Typography>
         <List>
-          <ListItem><ListItemText primary="Pienimuotoiset taimikonhoitotyöt sekä erikoiskohteiden puunkaadot metsänomistajan toiveiden mukaisesti kohteilla, missä ei voida tai haluta käyttää metsäkoneita" /></ListItem>
-          <ListItem><ListItemText primary="Leimikon teko ja metsäsuunnitelman päivitys" /></ListItem>
-          <ListItem><ListItemText primary="Metsätilan hoito avaimet käteen -periaatteella asiakkaalle, joka haluaa kokonaisvaltaista palvelua metsäomaisuutensa hoitoon" /></ListItem>
+          <ListItem><ListItemText primary="Pienimuotoiset taimikonhoitotyöt sekä erikoiskohteiden puunkaadot metsänomistajan toiveiden mukaisesti kohteilla, missä ei voida tai haluta käyttää metsäkoneita." /></ListItem>
+          <ListItem><ListItemText primary="Leimikon teko ja metsäsuunnitelman päivitys." /></ListItem>
+          <ListItem><ListItemText primary="Metsätilan hoito avaimet käteen -periaatteella asiakkaalle, joka haluaa kokonaisvaltaista palvelua metsäomaisuutensa hoitoon." /></ListItem>
         </List>
       </Paper>
       

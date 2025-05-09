@@ -3,6 +3,7 @@ import Home from './components/Home'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Services from './components/Services'
+import ScrollToTop from './components/ScrollToTop'
 
 import './App.css'
 import Contact from './components/Contact'
@@ -12,6 +13,7 @@ import { Box, Container } from '@mui/material'
 const App : React.FC = () => {
   return (
     <HashRouter>
+      <ScrollToTop />
       <Box
         sx={{
           display: 'flex',

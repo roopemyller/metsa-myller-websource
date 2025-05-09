@@ -14,12 +14,12 @@ const Home : React.FC = () => {
             >
                 <Box sx={{ flexGrow: 1, justifyContent: { xs: "center", md: "left" } }}>
                     <Typography variant="h2" sx={{wordBreak: "break-word", fontSize: { xs: '2.5rem', md: '3.5rem' }}}>METSÄ-MYLLER palveluksessasi!</Typography>
-                    <Typography variant="body2" sx={{ fontSize: { xs: '1rem', md: '1.3rem' } }}>
+                    <Typography variant="body2" sx={{ fontSize: { xs: '1rem', md: '1.3rem' }, paddingLeft: 1 }}>
                         Tarvitsetko apua metsätilasi hoidossa? <br />
                         Eikö terassilta näe järvelle? <br />
-                        Onko pihallasi liikaa puita tai vaarallisia puita? <br />
+                        Onko pihallasi liikaa tai vaarallisia puita? <br />
                         Haittaako pihalla oleva kanto liikkumista tai ruohonleikkuuta? <br />
-                        Ammottaako halkoliiteri tyhjyyttä?
+                        Ammottaako halkoliiterisi tyhjyyttään?
                     </Typography>
                     <Typography variant="body1" sx={{ marginTop: 2, fontSize: { xs: '1rem', md: '1.3rem' } }}>
                         <strong>Metsätyö Petri Myller toteuttaa kaikki metsätyöt ja puunkaadot ammattitaidolla ja luotettavasti!</strong>

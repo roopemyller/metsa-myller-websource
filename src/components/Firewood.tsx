@@ -6,18 +6,30 @@ const Firewood: React.FC = () => {
         <Box>
             <Typography variant="h4" gutterBottom>
                 Polttopuut myy ja toimittaa
-
             </Typography>
-            <Typography variant="h5" gutterBottom>
+            <Typography variant="h4" gutterBottom>
                 Metsäyhtymä Janne ja Petri Myller
+            </Typography>
+            
+            <Typography variant="h5" gutterBottom>
+                Tällä hetkellä myynnissä:
+            </Typography>
+
+            <Typography variant="body1" paragraph>
+                <strong>Tuoretta pilkettä:</strong>
+                <ul>
+                    <li>Koivupilke 33 cm</li>
+                    <li>Koivupilke 50 cm</li>
+                    <li>Havupilke 50 cm</li>
+                </ul>
+                <strong>Kuivaa pilkettä:</strong>
+                <ul>
+                    <li>Sekapilke 45-50 cm</li>
+                </ul>
             </Typography>
             
             <Typography variant="h6" color="error" gutterBottom>
                 Kuiva koivupilke on LOPPU!
-            </Typography>
-            
-            <Typography variant="body1" paragraph>
-                Tarjolla on tällä hetkellä kuivaa 45-50 cm <strong>sekapilkettä</strong> (tehty rangasta "klapi-tuikolla"), joka sopii hyvin esim. saunapuuksi tai leivinuuniin. 45 cm havupuupilkettä (tuoretta) on saatavilla ensi keväästä alkaen.
             </Typography>
             
             <Typography variant="h6" gutterBottom>
@@ -35,38 +47,47 @@ const Firewood: React.FC = () => {
                 <TableBody>
                     <TableRow>
                     <TableCell>Koivupilke</TableCell>
-                    <TableCell>80,00 €</TableCell>
+                    <TableCell>85,00 €</TableCell>
                     </TableRow>
                     <TableRow>
                     <TableCell>Sekapilke (50% koivu, 50% havu)</TableCell>
-                    <TableCell>70,00 €</TableCell>
+                    <TableCell>75,00 €</TableCell>
                     </TableRow>
                     <TableRow>
                     <TableCell>Havupuupilke ja "klapituiko-sekapilke"</TableCell>
-                    <TableCell>60,00 €</TableCell>
+                    <TableCell>65,00 €</TableCell>
                     </TableRow>
                 </TableBody>
                 </Table>
             </TableContainer>
             
+
+            <Typography variant="body1" paragraph>
+                Kaikki tuoreet pilkkeet -5 € / irto-m³ normaalihinnasta!
+            </Typography>
+
             <Typography variant="body1" paragraph>
                 Toimitus alk. <strong>125,00 € / kuorma</strong><br />
                 Pinoaminen alk. <strong>25,00 € / irto-m³</strong>
             </Typography>
             
             <Typography variant="body1" paragraph>
-                Lisää pilkettä tehdään talvella ja jos kesä on kuiva ja lämmin, on pilkekin kuivaa jo seuraavana syksynä. Pilkkeiden kuivattamiseen käytetään sähköä tasan 0 kWh/m³.
+                Pilkkeitä tehdään joka vuosi kevättalvisin ja jos tuleva kesä on kuiva ja lämmin, on pilkekin kuivaa jo seuraavana syksynä.
+                Pilkkeiden kuivattamiseen käytetään sähköä tasan 0 kWh/m³.
             </Typography>
             
             <Typography variant="body1" paragraph>
-                Ensi talvena teemme uutta pilkettä kuivumaan. Jos haluat jotain erityistä pituutta (esim. 50-60 cm), tilaa puut ennakkoon. Normaalisti valmistamme 33 ja 45 cm pilkettä. Jos haluat koivupilkkeet kuivamaan omaan varastoosi, on niiden toimitus mahdollista jo kevättalvella-kesällä (tuore pilke max 5 i-m³ kuormissa).
+                Jos haluat jotain erityistä pituutta (esim. 50-60 cm), 
+                tilaa puut ennakkoon. Normaalisti valmistamme 33 ja 50 cm pilkettä. Jos haluat koivupilkkeet kuivamaan 
+                omaan varastoosi, on niiden toimitus mahdollista jo kevättalvella-kesällä (tuore pilke max 5 irto-m³ kuormissa).
             </Typography>
             
-            <Typography variant="h6" gutterBottom>
+            <Typography variant="h5" gutterBottom>
                 Toimitus
             </Typography>
             <Typography variant="body1" paragraph>
-                Polttopuut toimitetaan 3-7 irto-m³ kuormissa kippaavalla henkilöauton peräkärryllä. Toimituksen hinta reitin <strong>Kiihtelysvaara - Heinävaara - Joensuu</strong> varrelle on <strong>125 € / kuorma</strong> (hinta sis. alv 25,5%).
+                Polttopuut toimitetaan 3-7 irto-m³ kuormissa kippaavalla henkilöauton peräkärryllä. Toimituksen hinta reitin 
+                <strong> Kiihtelysvaara - Heinävaara - Joensuu</strong> varrelle on <strong>125 € / kuorma</strong> (hinta sis. alv 25,5%).
             </Typography>
             
             <Typography variant="body1" paragraph>
@@ -74,7 +95,7 @@ const Firewood: React.FC = () => {
             </Typography>
             
             <Typography variant="body1" paragraph>
-                Erikseen sovittaessa puut voidaan pinota asiakkaan liiteriin/vastaavaan.
+                Erikseen sovittaessa puut voidaan pinota asiakkaan liiteriin/vast.
             </Typography>
             
             <Typography variant="h6" gutterBottom>

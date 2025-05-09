@@ -42,7 +42,7 @@ const Contact : React.FC = () => {
             return
         }
         const data = new FormData()
-        data.append("access_key", "c5a1bb6b-bbf7-4786-b33c-5a9c0ddd553a")
+        data.append("access_key", "2229ed1a-48d8-4285-880f-62fc961a1858")
         data.append("from_name", "metsa-myller.fi")
         data.append("subject", `Yhteydenotto henkilöltä ${formData.name} - metsa-myller.fi`)
         data.append("name", formData.name)
