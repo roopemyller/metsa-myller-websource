@@ -2,6 +2,8 @@ import { Box, Typography, Button, Stack  } from "@mui/material"
 import React from "react"
 import { Link } from "react-router-dom"
 
+import { getImagePath } from "./ImagePath"
+
 
 const Home : React.FC = () => {
     return (
@@ -29,7 +31,7 @@ const Home : React.FC = () => {
                     <br />
                     <Box
                         component="img"
-                        src="/yleis-2.jpg"
+                        src={getImagePath("/yleis-1.jpg")}
                         alt="Metsä-Myller Yleiskuva"
                         sx={{
                             display: { xs: "none", md: "block" },
@@ -46,7 +48,7 @@ const Home : React.FC = () => {
                 <Box
                     display={{ xs: "none", md: "block" }}
                     component="img"
-                    src={"/henkilo-koko.png"}
+                    src={getImagePath('/henkilo-koko.png')}
                     alt="Metsä-Myller henkilökuva"
                     sx={{
                         paddingRight: 2,
@@ -58,7 +60,7 @@ const Home : React.FC = () => {
                 <Box
                     display={{ xs: "block", md: "none" }}
                     component="img"
-                    src={"/henkilo-1.jpg"}
+                    src={getImagePath("/henkilo-1.jpg")}
                     alt="Metsä-Myller henkilökuva"
                     sx={{
                         maxHeight: 450,

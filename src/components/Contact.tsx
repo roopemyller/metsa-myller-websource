@@ -1,6 +1,7 @@
 import { Box, Typography, Button, Stack, TextField, Divider  } from "@mui/material"
 import React, { useEffect, useRef, useState } from "react"
 import HCaptcha from '@hcaptcha/react-hcaptcha'
+import { getImagePath } from "./ImagePath"
 
 const Contact : React.FC = () => {
 
@@ -87,7 +88,7 @@ const Contact : React.FC = () => {
 
             <Box
                 component="img"
-                src="/yleis-1.jpg"
+                src={getImagePath("/yleis-1.jpg")}
                 alt="Metsä-Myller Yleiskuva"
                 sx={{
                     width: '100%',

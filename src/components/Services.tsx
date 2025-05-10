@@ -6,6 +6,7 @@ import { TabContext, TabList, TabPanel } from '@mui/lab'
 import { useState } from 'react'
 import Firewood from "./Firewood"
 import ForestryServices from "./ForestryServices"
+import { getImagePath } from "./ImagePath"
 
 const Services : React.FC = () => {
     const [value, setValue] = useState('1');
@@ -26,7 +27,7 @@ const Services : React.FC = () => {
             </Box>
             <Box
                 component="img"
-                src="/yleis-3.jpg"
+                src={getImagePath("/yleis-3.jpg")}
                 alt="Metsä-Myller Yleiskuva"
                 sx={{
                     width: '100%',

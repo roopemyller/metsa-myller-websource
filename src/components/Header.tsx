@@ -2,7 +2,7 @@ import { Box, AppBar, Toolbar, Typography, Button, Container, IconButton, Menu  
 import MenuIcon from '@mui/icons-material/Menu'
 import React, {useState} from "react"
 import { Link } from "react-router-dom"
-
+import { getImagePath } from "./ImagePath"
 
 const Header : React.FC = () => {
     const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
@@ -21,7 +21,7 @@ const Header : React.FC = () => {
             <Container maxWidth="lg">
                 <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
                     
-                    <img src="/logo.png" alt="logo" style={{width: 75, height: 75, padding: 2}}/>
+                    <img src={getImagePath("/logo.png")} alt="logo" style={{width: 75, height: 75, padding: 2}}/>
                     <Typography variant="h4" sx={{ color: 'secondary.main', fontSize: { xs: '1.2rem', md: '1.5rem', lg: '1.75rem' }}}>
                         Metsä - Myller
                     </Typography>   
