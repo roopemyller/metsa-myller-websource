@@ -1,9 +1,9 @@
 {
   "name": "metsamyller-web",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
-  "homepage": "https://roopemyller.github.io/metsa-myller-websource/",
+  "homepage": "https://metsa-myller.fi",
   "scripts": {
     "predeploy": "pnpm run build",
     "deploy": "gh-pages -d dist",
