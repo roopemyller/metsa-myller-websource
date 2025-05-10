@@ -21,9 +21,11 @@ const Header : React.FC = () => {
             <Container maxWidth="lg">
                 <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
                     
-                    <img src={getImagePath("/logo.png")} alt="logo" style={{width: 75, height: 75, padding: 2}}/>
+                    <Link to="/">
+                        <img src={getImagePath("/logo.png")} alt="logo" style={{width: 75, height: 75, padding: 2}}/>
+                    </Link>
                     <Typography variant="h4" sx={{ color: 'secondary.main', fontSize: { xs: '1.2rem', md: '1.5rem', lg: '1.75rem' }}}>
-                        Metsä - Myller
+                        METSÄ-MYLLER                
                     </Typography>   
                     {/* Desktop Menu */}
                     <Box sx = {{ justifyContent: "left", gap: 1, display: { xs: 'none', md: 'flex' } }}>   

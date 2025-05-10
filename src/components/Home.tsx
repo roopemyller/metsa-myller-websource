@@ -48,7 +48,7 @@ const Home : React.FC = () => {
                 <Box
                     display={{ xs: "none", md: "block" }}
                     component="img"
-                    src={getImagePath('/henkilo-koko.png')}
+                    src={getImagePath('/henkilo-koko-1.png')}
                     alt="Metsä-Myller henkilökuva"
                     sx={{
                         paddingRight: 2,
