@@ -1,4 +1,4 @@
-import { HashRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './components/Home'
 import Header from './components/Header'
 import Footer from './components/Footer'
@@ -12,7 +12,7 @@ import { Box, Container } from '@mui/material'
 
 const App : React.FC = () => {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <ScrollToTop />
       <Box
         sx={{
@@ -46,7 +46,7 @@ const App : React.FC = () => {
         </Box>
         <Footer />
       </Box>
-    </HashRouter>
+    </BrowserRouter>
   )
 }
 

@@ -22,7 +22,7 @@ const Header : React.FC = () => {
                 <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
                     
                     <Link to="/">
-                        <img src={getImagePath("/logo.png")} alt="logo" style={{width: 75, height: 75, padding: 2}}/>
+                        <img src={getImagePath("/metsamyller-logo.png")} alt="logo" style={{width: 75, height: 75, padding: 2}}/>
                     </Link>
                     <Typography variant="h4" sx={{ color: 'secondary.main', fontSize: { xs: '1.2rem', md: '1.5rem', lg: '1.75rem' }}}>
                         METSÄ-MYLLER                
