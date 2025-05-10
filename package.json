@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
-  "homepage": "https://metsa-myller.fi",
+  "homepage": "https://roopemyller.github.io/metsa-myller-websource/",
   "scripts": {
     "predeploy": "pnpm run build",
     "deploy": "gh-pages -d dist",
