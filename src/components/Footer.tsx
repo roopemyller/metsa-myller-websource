@@ -27,7 +27,18 @@ const Footer = () => {
                     to="/yhteystiedot"
                 >
                     Ota yhteyttä!
-                </Button>            
+                </Button>        
+
+                <Box sx={{ mt: 1 }}>
+                    <Button 
+                        component={Link} 
+                        to="/tietosuoja" 
+                        color="secondary" 
+                        size="small"
+                    >
+                        Tietosuojaseloste
+                    </Button>
+                </Box>    
             </Container>
         </Box>  
     )

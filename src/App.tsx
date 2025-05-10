@@ -4,6 +4,8 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import Services from './components/Services'
 import ScrollToTop from './components/ScrollToTop'
+import CookieConsent from './components/CookieConsent'
+import PrivacyPolicy from './components/PrivacyPolicy'
 
 import './App.css'
 import Contact from './components/Contact'
@@ -41,10 +43,12 @@ const App : React.FC = () => {
               <Route path="/" element={<Home />} />
               <Route path="/palvelut" element={<Services />} />
               <Route path="/yhteystiedot" element={<Contact />} />
+              <Route path="/tietosuoja" element={<PrivacyPolicy/>}/>
             </Routes>
           </Container>
         </Box>
         <Footer />
+        <CookieConsent />
       </Box>
     </BrowserRouter>
   )
