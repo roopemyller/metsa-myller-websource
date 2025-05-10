@@ -21,7 +21,7 @@ const Header : React.FC = () => {
             <Container maxWidth="lg">
                 <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
                     
-                    <img src="logo.png" alt="logo" style={{width: 75, height: 75, padding: 2}}/>
+                    <img src="/logo.png" alt="logo" style={{width: 75, height: 75, padding: 2}}/>
                     <Typography variant="h4" sx={{ color: 'secondary.main', fontSize: { xs: '1.2rem', md: '1.5rem', lg: '1.75rem' }}}>
                         Metsä - Myller
                     </Typography>   

@@ -87,7 +87,7 @@ const Contact : React.FC = () => {
 
             <Box
                 component="img"
-                src="./yleis-1.jpg"
+                src="/yleis-1.jpg"
                 alt="Metsä-Myller Yleiskuva"
                 sx={{
                     width: '100%',

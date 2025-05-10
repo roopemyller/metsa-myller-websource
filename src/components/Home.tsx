@@ -29,7 +29,7 @@ const Home : React.FC = () => {
                     <br />
                     <Box
                         component="img"
-                        src="./yleis-2.jpg"
+                        src="/yleis-2.jpg"
                         alt="Metsä-Myller Yleiskuva"
                         sx={{
                             display: { xs: "none", md: "block" },
@@ -46,7 +46,7 @@ const Home : React.FC = () => {
                 <Box
                     display={{ xs: "none", md: "block" }}
                     component="img"
-                    src={"./henkilo-koko.png"}
+                    src={"/henkilo-koko.png"}
                     alt="Metsä-Myller henkilökuva"
                     sx={{
                         paddingRight: 2,
@@ -58,7 +58,7 @@ const Home : React.FC = () => {
                 <Box
                     display={{ xs: "block", md: "none" }}
                     component="img"
-                    src={"./henkilo-1.jpg"}
+                    src={"/henkilo-1.jpg"}
                     alt="Metsä-Myller henkilökuva"
                     sx={{
                         maxHeight: 450,
