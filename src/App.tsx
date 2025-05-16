@@ -6,6 +6,7 @@ import Services from './components/Services'
 import ScrollToTop from './components/ScrollToTop'
 import CookieConsent from './components/CookieConsent'
 import PrivacyPolicy from './components/PrivacyPolicy'
+import { CookieConsentProvider } from './components/contexts/CookieConsentContext'
 
 import './App.css'
 import Contact from './components/Contact'
@@ -14,6 +15,7 @@ import { Box, Container } from '@mui/material'
 
 const App : React.FC = () => {
   return (
+    <CookieConsentProvider>
     <BrowserRouter>
       <ScrollToTop />
       <Box
@@ -51,6 +53,7 @@ const App : React.FC = () => {
         <CookieConsent />
       </Box>
     </BrowserRouter>
+    </CookieConsentProvider>
   )
 }
 

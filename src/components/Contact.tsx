@@ -4,12 +4,18 @@ import HCaptcha from '@hcaptcha/react-hcaptcha'
 import { getImagePath } from "./ImagePath"
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 
+import { useCookieConsent } from "./contexts/CookieConsentContext";
+
 const Contact : React.FC = () => {
 
     const [formData, setFormData] = useState({ name: "", email: "", number: "", message: "" })
     const [status, setStatus] = useState<string | null>(null)
     const [token, setToken] = useState<string | null>(null)
+   
     const captchaRef = useRef<HCaptcha>(null)
+
+    const { cookiesAccepted, handleAcceptCookies } = useCookieConsent()
+    // const cookieConsent = localStorage.getItem('cookieConsent')
 
     useEffect(() => {
         let timeoutId: NodeJS.Timeout
@@ -20,7 +26,6 @@ const Contact : React.FC = () => {
             }, 5000)
         }
 
-        // Cleanup function to clear timeout if component unmounts or status changes
         return () => {
             if (timeoutId) {
                 clearTimeout(timeoutId);
@@ -148,23 +153,39 @@ const Contact : React.FC = () => {
             >
                 {/* Left Side: Contact Form */}
                 <Box sx={{ flex: 1, mb: 4 }}>
-                    <Box component="form" onSubmit={handleSubmit} sx={{ display: "flex", flexDirection: "column", gap: 1.5}}>
-                        <TextField name="name" value={formData.name} label="Koko nimi" variant="outlined" fullWidth required onChange={handleChange} />
-                        <TextField name="email" value={formData.email} label="Sähköposti" type="email" variant="outlined" fullWidth required onChange={handleChange} />
-                        <TextField name="number" value={formData.number} label="Puhelinnumero" type="tel" variant="outlined" fullWidth required onChange={handleChange}/>
-                        <TextField name="message" value={formData.message} label="Viesti" multiline rows={4} variant="outlined" fullWidth required onChange={handleChange}/>
-                        <HCaptcha
-                            sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
-                            ref={captchaRef}
-                            reCaptchaCompat={false}
-                            onVerify={onHCaptchaChange}
-                            languageOverride="fi"
-                        />
-                        <Button variant="contained" color="primary" size="large" type="submit">
-                        Lähetä viesti
-                        </Button>
-                        {status && <Typography color="primary">{status}</Typography>}
-                    </Box>
+                    {cookiesAccepted ? (
+                        <Box component="form" onSubmit={handleSubmit} sx={{ display: "flex", flexDirection: "column", gap: 1.5}}>
+                            <TextField name="name" value={formData.name} label="Koko nimi" variant="outlined" fullWidth required onChange={handleChange} />
+                            <TextField name="email" value={formData.email} label="Sähköposti" type="email" variant="outlined" fullWidth required onChange={handleChange} />
+                            <TextField name="number" value={formData.number} label="Puhelinnumero" type="tel" variant="outlined" fullWidth required onChange={handleChange}/>
+                            <TextField name="message" value={formData.message} label="Viesti" multiline rows={4} variant="outlined" fullWidth required onChange={handleChange}/>
+                            <HCaptcha
+                                sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
+                                ref={captchaRef}
+                                reCaptchaCompat={false}
+                                onVerify={onHCaptchaChange}
+                                languageOverride="fi"
+                            />
+                            <Button variant="contained" color="primary" size="large" type="submit">
+                                Lähetä viesti   
+                            </Button>
+                            {status && <Typography color="primary">{status}</Typography>}
+                        </Box>
+                    ) : (
+                        <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+                            <Typography variant="body2" color="error">
+                                Yhteydenottolomakkeen käyttö vaatii evästeiden hyväksymisen roskapostin estämiseksi.
+                            </Typography>
+                            <Button 
+                                variant="outlined" 
+                                color="primary" 
+                                onClick={handleAcceptCookies}
+                                sx={{ alignSelf: 'flex-start' }}
+                            >
+                                Hyväksy evästeet
+                            </Button>
+                        </Box>
+                    )}    
                 </Box>
                 {/* Divider */}
                 <Divider

@@ -1,4 +1,4 @@
-import { Box, Typography, Container, Divider, List, ListItem, ListItemText } from '@mui/material'
+import { Box, Typography, Container, Divider, List, ListItem, ListItemText, Link } from '@mui/material'
 
 const PrivacyPolicy = () => {
   return (
@@ -78,6 +78,48 @@ const PrivacyPolicy = () => {
       <Section title="8. Tietoturva">
         <Typography>
           Kaikki tiedot suojataan asianmukaisin teknisin ja organisatorisin keinoin.
+        </Typography>
+      </Section>
+
+      <Section title="9. Evästeet ja hCaptcha-palvelu">
+        <Typography paragraph>
+          Käytämme sivustollamme hCaptcha-tietoturvapalvelua, jonka tarjoaa yhdysvaltalainen Intuition Machines, Inc. ("IMI"). 
+          hCaptcha varmistaa, että yhteydenottolomakkeen täyttää ihminen eikä automaattinen ohjelma.
+        </Typography>
+        
+        <Typography paragraph>
+          Palvelu analysoi kävijän toimintaa vasta evästeiden hyväksymisen jälkeen ja ainoastaan 
+          yhteydenottosivulla. Analyysi alkaa, kun vierailija on hyväksynyt evästeet. Analyysissä kerätään tietoja kuten:
+        </Typography>
+
+        <List dense>
+          {[
+            "IP-osoite",
+            "Sivustolla vietetty aika",
+            "Hiiren liikkeet",
+            "Muut käyttäytymiseen liittyvät tiedot"
+          ].map((item) => (
+            <ListItem key={item} disablePadding>
+              <ListItemText primary={`• ${item}`} />
+            </ListItem>
+          ))}
+        </List>
+
+        <Typography paragraph sx={{ mt: 2 }}>
+          Tietojen käsittely perustuu EU:n yleisen tietosuoja-asetuksen (GDPR) artikloihin 6(1)(b) ja 6(1)(f).
+          Käsittely on tarpeen palvelumme suojaamiseksi väärinkäytöksiltä ja roskapostilta.
+        </Typography>
+
+        <Typography>
+          IMI toimii tietojen käsittelijänä EU:n tietosuoja-asetuksen mukaisesti.
+          Lisätietoja hCaptchan tietosuojakäytännöistä löydät osoitteista:{' '}
+          <Link href="https://www.hcaptcha.com/privacy" target="_blank" rel="noopener noreferrer">
+            hCaptcha Privacy Policy
+          </Link>{' '}
+          ja{' '}
+          <Link href="https://www.hcaptcha.com/terms" target="_blank" rel="noopener noreferrer">
+            Terms of Service
+          </Link>.
         </Typography>
       </Section>
     </Container>
