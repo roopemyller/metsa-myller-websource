@@ -2,6 +2,7 @@ import { Box, Typography, Button, Stack, TextField, Divider  } from "@mui/materi
 import React, { useEffect, useRef, useState } from "react"
 import HCaptcha from '@hcaptcha/react-hcaptcha'
 import { getImagePath } from "./ImagePath"
+import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 
 const Contact : React.FC = () => {
 
@@ -81,7 +82,46 @@ const Contact : React.FC = () => {
             <Typography mb={1}>
                 Ota rohkeasti yhteyttä! Voit soittaa, laittaa viestiä tai käyttää alla olevaa lomaketta.
             </Typography>
-
+            <Box
+                sx={{
+                    backgroundColor: 'primary.main',
+                    borderRadius: 2,
+                    p: { xs: 2, sm: 3 },
+                    mb: 2,
+                    display: 'flex',
+                    flexDirection: { xs: 'row', sm: 'row' },
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    gap: 2,
+                    boxShadow: 3,
+                    cursor: 'pointer',
+                    transition: 'transform 0.2s, box-shadow 0.2s',
+                    '&:hover': {
+                        transform: 'scale(1.02)',
+                        boxShadow: 6,
+                    },
+                    textDecoration: 'none',
+                    
+                }}
+                component="a"
+                href="tel:0400858720"
+            >
+                <LocalPhoneIcon sx={{ fontSize: 28, color: 'white' }} />
+                <Typography
+                    variant="h5"
+                    color="white"
+                    sx={{
+                        fontWeight: 'bold',
+                        letterSpacing: 2,
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: 1,
+                        textDecoration: 'none',
+                    }}
+                >
+                    0400 858 720
+                </Typography>
+            </Box>
             <Typography mb={4}>
                 Päiväsaikaan tavoittaa parhaiten tekstiviestillä tai sähköpostilla, koska sahan pärinän yli ei puhelimen sointia tahdo kuulla.
             </Typography>
