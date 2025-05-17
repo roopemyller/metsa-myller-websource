@@ -31,7 +31,7 @@ const Home : React.FC = () => {
                     <br />
                     <Box
                         component="img"
-                        src={getImagePath("/yleis-1.jpg")}
+                        src={getImagePath("/yleis-0.jpg")}
                         alt="Metsä-Myller Yleiskuva"
                         sx={{
                             display: { xs: "none", md: "block" },
