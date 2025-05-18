@@ -8,7 +8,10 @@
     "predeploy": "pnpm run build",
     "deploy": "gh-pages -d dist",
     "dev": "NODE_ENV=development vite",
-    "build": "NODE_ENV=production tsc -b && vite build",
+    "build": "npm run build:clean && npm run build:app && npm run build:copy",
+    "build:clean": "rm -rf dist",
+    "build:app": "NODE_ENV=production tsc -b && vite build",
+    "build:copy": "cp public/404.html dist/ && cp public/.nojekyll dist/ && cp public/robots.txt dist/ && cp public/sitemap.xml dist/",
     "lint": "eslint .",
     "preview": "vite preview"
   },
