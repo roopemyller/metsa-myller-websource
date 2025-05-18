@@ -7,6 +7,7 @@ import ScrollToTop from './components/ScrollToTop'
 import CookieConsent from './components/CookieConsent'
 import PrivacyPolicy from './components/PrivacyPolicy'
 import { CookieConsentProvider } from './components/contexts/CookieConsentContext'
+import RedirectHandler from './components/RedirectHandler'
 
 import './App.css'
 import Contact from './components/Contact'
@@ -17,6 +18,7 @@ const App : React.FC = () => {
   return (
     <CookieConsentProvider>
     <BrowserRouter>
+      <RedirectHandler />
       <ScrollToTop />
       <Box
         sx={{
