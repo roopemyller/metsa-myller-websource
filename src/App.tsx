@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes, useNavigate } from 'react-router-dom'
 import Home from './components/Home'
 import Header from './components/Header'
 import Footer from './components/Footer'
@@ -11,10 +11,24 @@ import RedirectHandler from './components/RedirectHandler'
 
 import './App.css'
 import Contact from './components/Contact'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Box, Container } from '@mui/material'
 
 const App : React.FC = () => {
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const redirected = window.location.search.startsWith("?");
+    if (redirected) {
+      const path = window.location.search.slice(1).split("&")[0]; // path from redirect
+      if (path) {
+        navigate("/" + path, { replace: true });
+      }
+    }
+  }, [navigate]);
+
+
   return (
     <CookieConsentProvider>
     <BrowserRouter>
