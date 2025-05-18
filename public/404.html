@@ -1,19 +1,15 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Page Not Found</title>
-    <meta http-equiv="refresh" content="0; url=./?redirected">
-    <script>
-      var redirectTo = location.protocol + "//" + location.host + "/?" + location.pathname.slice(1) + location.search + location.hash;
-      location.replace(redirectTo);
-    </script>
-  </head>
-  <body>
-    <h1>Redirecting…</h1>
-    <p>If you are not redirected automatically, <a id="redirectLink" href="/">click here</a>.</p>
-    <script>
-      document.getElementById("redirectLink").href = location.protocol + "//" + location.host + "/?" + location.pathname.slice(1) + location.search + location.hash;
-    </script>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title>Redirecting…</title>
+  <script type="text/javascript">
+    var pathname = window.location.pathname;
+    var search = window.location.search;
+    var hash = window.location.hash;
+    var redirectUrl = '/index.html?redirect=' + encodeURIComponent(pathname + search + hash);
+    window.location.replace(redirectUrl);
+  </script>
+</head>
+<body></body>
 </html>
