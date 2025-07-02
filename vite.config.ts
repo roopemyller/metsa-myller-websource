@@ -11,5 +11,6 @@ export default defineConfig({
         manualChunks: undefined
       }
     }
-  }
+  },
+  assetsInclude: ['**/*.webp', '**/*.svg', '**/*.png', '**/*.jpg', '**/*.jpeg', '**/*.mp4'],
 })

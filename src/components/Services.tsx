@@ -27,7 +27,7 @@ const Services : React.FC = () => {
             </Box>
             <Box
                 component="img"
-                src={getImagePath("/yleis-3.jpg")}
+                src={getImagePath("/yleis-3.webp")}
                 alt="Metsä-Myller Yleiskuva"
                 sx={{
                     width: '100%',

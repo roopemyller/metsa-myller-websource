@@ -4,7 +4,6 @@ import { Link } from "react-router-dom"
 
 import { getImagePath } from "./ImagePath"
 
-
 const Home : React.FC = () => {
     return (
         <Box>
@@ -29,26 +28,40 @@ const Home : React.FC = () => {
                     <br />
                     <Button variant="outlined" color="primary" component={Link} to="/yhteystiedot">Ota yhteyttä!</Button>            
                     <br />
-                    <Box
-                        component="img"
-                        src={getImagePath("/yleis-0.jpg")}
-                        alt="Metsä-Myller Yleiskuva"
+                    <br />
+                     <Box
                         sx={{
-                            display: { xs: "none", md: "block" },
-                            marginTop: 2,
                             width: '100%',
-                            maxWidth: '650px',
-                            height: 'auto',
+                            paddingTop: '56.25%', // 16:9 aspect ratio (9 / 16 * 100)
+                            position: 'relative',
+                            overflow: 'hidden',
+                            backgroundColor: 'black',
                             objectFit: 'contain',
                             borderRadius: '8px',
                             boxShadow: '0 4px 6px rgba(0, 0, 0, 0.5)',
                         }}
-                    />
+                        >
+                        <video
+                            src="/video.mp4"
+                            autoPlay
+                            muted
+                            loop
+                            playsInline
+                            style={{
+                                position: 'absolute',
+                                top: 0,
+                                left: 0,
+                                width: '100%',
+                                height: '100%',
+                                objectFit: 'contain',
+                            }}
+                        />
+                        </Box>
                 </Box>
                 <Box
                     display={{ xs: "none", md: "block" }}
                     component="img"
-                    src={getImagePath('/henkilo-koko-1.png')}
+                    src={getImagePath('/henkilo-koko-1.webp')}
                     alt="Metsä-Myller henkilökuva"
                     sx={{
                         paddingRight: 2,
@@ -58,9 +71,9 @@ const Home : React.FC = () => {
                     }}
                 />
                 <Box
-                    display={{ xs: "block", md: "none" }}
+                    display={{ xs: "none", md: "none" }}
                     component="img"
-                    src={getImagePath("/henkilo-1.jpg")}
+                    src={getImagePath("/henkilo-1.webp")}
                     alt="Metsä-Myller henkilökuva"
                     sx={{
                         maxHeight: 450,

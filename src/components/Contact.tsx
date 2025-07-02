@@ -133,7 +133,7 @@ const Contact : React.FC = () => {
 
             <Box
                 component="img"
-                src={getImagePath("/yleis-1.jpg")}
+                src={getImagePath("/auto-sony-crop-1.webp")}
                 alt="Metsä-Myller Yleiskuva"
                 sx={{
                     width: '100%',
