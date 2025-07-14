@@ -6,7 +6,7 @@
   "homepage": "https://metsa-myller.fi",
   "scripts": {
     "dev": "NODE_ENV=development vite",
-    "build": "NODE_ENV=production tsc -b && vite build",
+    "build": "vite build",
     "build:copy": "cp public/robots.txt dist/ && cp public/sitemap.xml dist/",
     "lint": "eslint .",
     "preview": "vite preview"
