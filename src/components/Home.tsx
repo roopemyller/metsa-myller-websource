@@ -70,19 +70,6 @@ const Home : React.FC = () => {
                         objectFit: 'contain',
                     }}
                 />
-                <Box
-                    display={{ xs: "none", md: "none" }}
-                    component="img"
-                    src={getImagePath("/henkilo-1.webp")}
-                    alt="Metsä-Myller henkilökuva"
-                    sx={{
-                        maxHeight: 450,
-                        width: 'auto',
-                        objectFit: 'contain',
-                        borderRadius: '8px',
-                        boxShadow: '0 3px 6px rgba(0, 0, 0, 0.5)',
-                    }}
-                />
             </Stack>
         </Box>
     )

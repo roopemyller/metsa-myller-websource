@@ -18,6 +18,13 @@ const Contact : React.FC = () => {
     // const cookieConsent = localStorage.getItem('cookieConsent')
 
     useEffect(() => {
+        if (!import.meta.env.VITE_WEB3FORMS_ACCESS_KEY) {
+            console.error('Web3Forms access key not found in environment variables')
+        }
+        if (!import.meta.env.VITE_HCAPTCHA_SITEKEY) {
+            console.error('hCaptcha site key not found in environment variables')
+        }
+        
         let timeoutId: NodeJS.Timeout
         
         if (status) {
@@ -49,7 +56,7 @@ const Contact : React.FC = () => {
             return
         }
         const data = new FormData()
-        data.append("access_key", "2229ed1a-48d8-4285-880f-62fc961a1858")
+        data.append("access_key", import.meta.env.VITE_WEB3FORMS_ACCESS_KEY)
         data.append("from_name", "metsa-myller.fi")
         data.append("subject", `Yhteydenotto henkilöltä ${formData.name} - metsa-myller.fi`)
         data.append("name", formData.name)
@@ -160,7 +167,7 @@ const Contact : React.FC = () => {
                             <TextField name="number" value={formData.number} label="Puhelinnumero" type="tel" variant="outlined" fullWidth required onChange={handleChange}/>
                             <TextField name="message" value={formData.message} label="Viesti" multiline rows={4} variant="outlined" fullWidth required onChange={handleChange}/>
                             <HCaptcha
-                                sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
+                                sitekey={import.meta.env.VITE_HCAPTCHA_SITEKEY}
                                 ref={captchaRef}
                                 reCaptchaCompat={false}
                                 onVerify={onHCaptchaChange}

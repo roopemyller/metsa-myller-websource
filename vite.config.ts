@@ -5,12 +5,7 @@ export default defineConfig({
   plugins: [react()],
   base: '/',
   build: {
-    outDir: 'dist',
-    rollupOptions: {
-      output: {
-        manualChunks: undefined
-      }
-    }
+    outDir: 'dist'
   },
-  assetsInclude: ['**/*.webp', '**/*.svg', '**/*.png', '**/*.jpg', '**/*.jpeg', '**/*.mp4'],
+  assetsInclude: ['**/*.webp', '**/*.svg', '**/*.png', '**/*.jpg', '**/*.jpeg', '**/*.mp4']
 })
