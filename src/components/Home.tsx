@@ -27,6 +27,7 @@ const Home : React.FC = () => {
                     </Typography>
                     <br />
                     <Button variant="outlined" color="primary" component={Link} to="/yhteystiedot">Ota yhteyttä!</Button>            
+                    <Button sx={{ ml: 1}} variant="outlined" color="primary" component={Link} to="/palvelut">Palvelut</Button>            
                     <br />
                     <br />
                      <Box
