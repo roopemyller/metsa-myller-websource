@@ -23,7 +23,7 @@ const Services : React.FC = () => {
                     Lue lisää alta tarjoamistamme palveluista ja hinnoistamme!
                 </Typography>
 
-                <Button variant="outlined" color="primary" component={Link} to="/yhteystiedot">Pyydä tarjous!</Button>            
+                <Button sx={{fontSize: 18}} variant="outlined" color="primary" component={Link} to="/yhteystiedot">Pyydä tarjous!</Button>            
             </Box>
             <Box
                 component="img"
@@ -41,8 +41,8 @@ const Services : React.FC = () => {
             <TabContext value={value}>
                 <Box sx={{ borderBottom: 1, borderColor: 'divider', mt: 2 }}>
                     <TabList onChange={handleChange} aria-label="services tabs" variant="fullWidth">
-                    <Tab label="Metsätyöpalvelut" value="1" />
-                    <Tab label="Polttopuut" value="2" />
+                    <Tab sx={{fontSize: 19}} label="Metsätyöpalvelut" value="1" />
+                    <Tab sx={{fontSize: 19}} label="Polttopuut" value="2" />
                     </TabList>
                 </Box>
                 <Box sx={{ width: '100%', maxWidth: '850px' }}>

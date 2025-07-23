@@ -173,7 +173,7 @@ const Contact : React.FC = () => {
                                 onVerify={onHCaptchaChange}
                                 languageOverride="fi"
                             />
-                            <Button variant="contained" color="primary" size="large" type="submit">
+                            <Button sx={{fontSize: 18}} variant="contained" color="primary" size="large" type="submit">
                                 Lähetä viesti   
                             </Button>
                             {status && <Typography color="primary">{status}</Typography>}

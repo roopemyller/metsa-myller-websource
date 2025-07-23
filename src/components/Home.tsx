@@ -26,8 +26,8 @@ const Home : React.FC = () => {
                         <strong>Metsätyö Petri Myller toteuttaa kaikki metsätyöt ja puunkaadot ammattitaidolla ja luotettavasti!</strong>
                     </Typography>
                     <br />
-                    <Button variant="outlined" color="primary" component={Link} to="/yhteystiedot">Ota yhteyttä!</Button>            
-                    <Button sx={{ ml: 1}} variant="outlined" color="primary" component={Link} to="/palvelut">Palvelut</Button>            
+                    <Button sx={{ fontSize: 18}} variant="outlined" color="primary" component={Link} to="/yhteystiedot">Ota yhteyttä!</Button>
+                    <Button sx={{ ml: 1, fontSize: 18}} variant="outlined" color="primary" component={Link} to="/palvelut">Palvelut</Button>
                     <br />
                     <br />
                      <Box
