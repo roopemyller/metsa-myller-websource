@@ -1,13 +1,14 @@
-import { Box, Typography, Table, TableContainer, Paper, TableHead, TableRow, TableCell, TableBody  } from "@mui/material"
+import { Box, Typography, Table, TableContainer, Paper, TableHead, TableRow, TableCell, TableBody, Button  } from "@mui/material"
 import React from "react"
+import { Link } from "react-router-dom"
 
 const Firewood: React.FC = () => {
     return (
         <Box>
-            <Typography variant="h4" gutterBottom>
+            <Typography variant="h4" gutterBottom color="primary">
                 Polttopuut myy ja toimittaa
             </Typography>
-            <Typography variant="h4" gutterBottom>
+            <Typography variant="h4" gutterBottom color="primary">
                 Metsäyhtymä Janne ja Petri Myller
             </Typography>
             
@@ -15,22 +16,18 @@ const Firewood: React.FC = () => {
                 Tällä hetkellä myynnissä:
             </Typography>
 
+
+            
             <Typography variant="body1" paragraph>
-                <strong>Tuoretta pilkettä:</strong>
-                <ul>
-                    <li>Koivupilke 33 cm</li>
-                    <li>Koivupilke 50 cm</li>
-                    <li>Havupilke 50 cm</li>
-                </ul>
                 <strong>Kuivaa pilkettä:</strong>
                 <ul>
-                    <li>Sekapilke 45-50 cm</li>
+                    <li>Koivupilke 33 cm (kevättalvella 2025 tehty)</li>
+                    <li>Koivupilke 50 cm (II-laatu)</li>
+                    <li>Havupilke 50 cm</li>
+                    <li>Sekapilke 45-50 cm (klapituikolla tehty)</li>
                 </ul>
             </Typography>
-            
-            <Typography variant="h6" color="error" gutterBottom>
-                Kuiva koivupilke on LOPPU!
-            </Typography>
+
             
             <Typography variant="h6" gutterBottom>
                 Hinnat (sis. alv 25,5%):
@@ -50,7 +47,7 @@ const Firewood: React.FC = () => {
                     <TableCell>85,00 €</TableCell>
                     </TableRow>
                     <TableRow>
-                    <TableCell>Sekapilke (50% koivu, 50% havu)</TableCell>
+                    <TableCell>Sekapilke (50% koivu, 50% havu), Koivupilke (II-laatu)</TableCell>
                     <TableCell>75,00 €</TableCell>
                     </TableRow>
                     <TableRow>
@@ -70,6 +67,8 @@ const Firewood: React.FC = () => {
                 Toimitus alk. <strong>125,00 € / kuorma</strong><br />
                 Pinoaminen alk. <strong>25,00 € / irto-m³</strong>
             </Typography>
+            
+            <Button sx={{fontSize: 16, mb: 1}} variant="outlined" color="primary" component={Link} to="/yhteystiedot">OTA YHTEYTTÄ TÄSTÄ!</Button>            
             
             <Typography variant="body1" paragraph>
                 Pilkkeitä tehdään joka vuosi kevättalvisin ja jos tuleva kesä on kuiva ja lämmin, on pilkekin kuivaa jo seuraavana syksynä.
