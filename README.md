@@ -21,7 +21,7 @@ To run the project locally, follow these steps:
     ```
 4. Start the development server:
     ```bash
-    ppm run dev
+    npm run dev
     ```
 5. Open your browser and go to `http://localhost:3000` to view the application.    
 
